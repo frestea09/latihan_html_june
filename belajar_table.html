@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="ilman teguh prasetya">
+        <meta name="description" content="belajar web programming menggunakan html">
+        <meta name="keywords" content="HTML,CSS,Javascript">
+        <title>
+            Belajar Web Programming
+        </title>
+        <script type="text/javascript">
+            var bilangan = 0;
+            var listId = []
+            function tambah(){
+                // const elementBaru = document.createElement('td');
+                // const textElementBaru = document.createTextNode('Super Junior');
+                // elementBaru.appendChild(textElementBaru);
+                var para = document.createElement("p");               // Create a <p> element
+                para.id = 'anak'+String(bilangan);
+                para.innerText = "ini ganteng";               // Insert text
+                document.body.appendChild(para);                      // Append <p> to <body> 
+                // const sectionA = document.getElementById('tambahHallo');
+                // sectionA.appendChild(elementBaru);
+            }
+            function tampilkanKeSatu(){
+                let kalimat = document.getElementById("anak").innerText;
+                alert(kalimat);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <table id="tableBelajar" name="tableBelajar" border="1">
+                <thead>
+                    <tr>
+                        <td>Nim</td>
+                        <td>Nama</td>
+                        <td>Address</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10112299</td>
+                        <td>ilman</td>
+                        <td><input id='tambahHallo' name="tambahHalo" type="button" value="tambah" onclick="tambah();"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <td><input id='tambahIlman' name="tambahIlman" type="button" value="tambah" onclick="tampilkanKeSatu();"/></td>
+        </div>
+    </body>
+</html>
